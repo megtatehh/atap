@@ -30,6 +30,8 @@ FEMALE_WORDS = set([
 
 
 def genderize(words):
+    
+    #This definititon can be used to see if some sentence of words contain only male words, female words, a mix, or words we dont view as gender specific
 
     mwlen = len(MALE_WORDS.intersection(words))
     fwlen = len(FEMALE_WORDS.intersection(words))
