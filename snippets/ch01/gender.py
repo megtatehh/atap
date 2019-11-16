@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# the goal for this is to see what type of articals use gender words and how frequently
 
 import nltk
 from collections import Counter
@@ -47,7 +48,7 @@ def genderize(words):
 
 
 def count_gender(sentences):
-
+# thsi definition counst the number of times a gender related word comes up in a sentence 
     sents = Counter()
     words = Counter()
 
@@ -60,7 +61,7 @@ def count_gender(sentences):
 
 
 def parse_gender(text):
-
+# this definition parses words out of text and then calls the definitions above to work out the percentage of the number of words in an article.
     sentences = [
         [word.lower() for word in nltk.word_tokenize(sentence)]
         for sentence in nltk.sent_tokenize(text)
